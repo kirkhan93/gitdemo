@@ -59,7 +59,8 @@ sap.ui.define([
 					
 				})*/
 
-			service.callservice("/newvendor", "GET", {}).then(function(data) {
+			//service.callservice("/newvendor", "GET", {}).then(function(data) {
+				service.callservice("/vendor", "GET", {}).then(function(data) {
 				var oTable = that.getView().byId("idtable");
 				var oModel = sap.ui.getCore().getModel();
 				oModel.setProperty( "/vendor"  ,  data._embedded.vendor);
