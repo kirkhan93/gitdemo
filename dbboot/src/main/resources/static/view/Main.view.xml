@@ -1,0 +1,102 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 	xmlns:core="sap.ui.core"
+	xmlns:t="sap.ui.table" controllerName="hani.controller.Main">
+	<Page title="Welcome to the Spring Boot UI5 app">
+	
+	
+		<Button id="idbutton" text="LoadData" press="onloadData"></Button>
+		
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Name" />
+				<Input id="companyName" value="{/postPayload/companyName}" />
+				
+				<Label text="contactName" />
+				<Input value="{/postPayload/contactName}">
+				</Input>
+				
+				<Label text="lastname" />
+				<Input value="{/postPayload/lastname}">
+				</Input>
+				
+					
+				<Label text="website" />
+				<Input value="{/postPayload/website}">
+				</Input>
+				
+					
+				<Label text="email" />
+				<Input value="{/postPayload/email}">
+				</Input>
+				
+					
+				<Label text="gstno" />
+				<Input value="{/postPayload/gstno}">
+				</Input>
+				
+				
+				
+				
+			
+			</f:content>
+		</f:SimpleForm>
+		
+		
+		
+
+	<t:Table id="idtable">
+		<t:columns>
+			<t:Column>
+				<t:label >
+				<Text text="Contact Name"></Text></t:label>
+				<t:template>
+					<Text text="{contactName} {lastname}"></Text>
+				</t:template>
+			</t:Column>
+
+
+             <t:Column>
+				<t:label >
+				<Text text="Company"></Text>
+				</t:label>
+				<t:template>
+					<Text text="{companyName} "></Text>
+				</t:template>
+			</t:Column>
+			<t:Column>
+				<t:label >
+				<Text text="Email"></Text>
+				</t:label>
+				<t:template>
+					<Text text="{email} "></Text>
+				</t:template>
+			</t:Column>
+
+
+		</t:columns>
+
+
+	</t:Table>
+	<footer>
+	<Toolbar>
+	
+	<Button id="idbutton2" text="Save" press="onSaveData"></Button>
+	</Toolbar>
+	</footer>
+		</Page>
+</mvc:View> 
