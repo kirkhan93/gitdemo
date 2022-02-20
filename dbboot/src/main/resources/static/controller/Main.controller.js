@@ -63,7 +63,8 @@ sap.ui.define([
 				service.callservice("/vendor", "GET", {}).then(function(data) {
 				var oTable = that.getView().byId("idtable");
 				var oModel = sap.ui.getCore().getModel();
-				oModel.setProperty( "/vendor"  ,  data._embedded.vendor);
+				//oModel.setProperty( "/vendor"  ,  data._embedded.vendor); // for local
+			  oModel.setProperty( "/vendor"  ,  data); // for cloud
 				oTable.bindRows("/vendor");
 			}).catch(function() {
 
